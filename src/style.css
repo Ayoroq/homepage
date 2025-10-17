@@ -1,0 +1,38 @@
+:root {
+  --nav-height: 60px;
+  --text-colour: black;
+
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  padding: 5%;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 3rem;
+  text-decoration: none;
+  color: #212529;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--text-colour);
+  font-size: 1.5rem;
+}
+
+.nav-item a:hover {
+  color: #007bff;
+}
