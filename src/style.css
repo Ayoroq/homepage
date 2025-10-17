@@ -1,23 +1,34 @@
 :root {
-  --nav-height: 60px;
-  --text-colour: black;
+  /* Fonts */
+  --fnav: "Glegoo", serif;
+  --fnav-regular: 400;
+  --fnav-bold: 800;
 
+  /* Colors */
+  --text-colour: black;
+  --colour-primary: #007bff;
+  --colour-border: #ccc;
+
+  /* Sizing */
+  --nav-height: 60px;
 }
 
 .nav {
+    font-family: var(--fnav);
+    font-weight: var(--fnav-bold);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: var(--nav-height);
+  min-height: var(--nav-height);
   padding: 5%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--colour-border);
 }
 
 .logo {
-  font-weight: bold;
+  font-weight: var(--fw-bold);
   font-size: 3rem;
   text-decoration: none;
-  color: #212529;
+  color: var(--text-colour);
 }
 
 .nav-list {
@@ -34,5 +45,5 @@
 }
 
 .nav-item a:hover {
-  color: #007bff;
+  color: var(--colour-primary);
 }
