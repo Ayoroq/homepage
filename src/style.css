@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Snell Roundhand";
+  src: url("../assets/Snell Roundhand W01 Script.woff2") format("woff2");
+  font-display: swap;
+}
+
 :root {
   /* Fonts */
   --fnav: "Glegoo", serif;
@@ -8,20 +14,28 @@
   --text-colour: black;
   --colour-primary: #007bff;
   --colour-border: #ccc;
+  --colour-main: #D92D2D;
 
   /* Sizing */
   --nav-height: 60px;
 }
 
-.nav {
-    font-family: var(--fnav);
-    font-weight: var(--fnav-bold);
+body {
   display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.nav {
+  font-family: var(--fnav);
+  font-weight: var(--fnav-bold);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-height: var(--nav-height);
   padding: 5%;
-  border-bottom: 1px solid var(--colour-border);
 }
 
 .logo {
@@ -46,4 +60,29 @@
 
 .nav-item a:hover {
   color: var(--colour-primary);
+}
+
+.main {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 20rem;
+}
+
+.name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 5vw + 5rem, 8rem);
+  color: var(--colour-main);
+  margin: 1rem 0;
+}
+
+.portfolio {
+  font-family: "Snell Roundhand", cursive;
+  font-size: clamp(2rem, 5vw + 5rem, 8rem);
 }
